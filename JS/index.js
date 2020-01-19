@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var userContent = document.getElementById("new-item").value;
     var newLi = document.createElement("li");
-    var bob = document.createTextNode(userContent);
-    newLi.appendChild(bob);
+    var addContent = document.createTextNode(userContent);
+    newLi.appendChild(addContent);
     document.getElementById("to-do-list").appendChild(newLi);
 
     // document.getElementById("to-do-list").appendChild(li);
