@@ -10,6 +10,27 @@ html {
   }
 
 
-.test {
-  color: red;
+.complete-container {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-image: url("../assets/pencil.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 700px;
+  min-width: 670px;
+  margin-top: 10px;
+}
+
+.list-functional-container {
+  position: absolute;
+  width: 300px;
+}
+
+h1 {
+  font-size: 52px;
+  padding-right: 50px;
+  margin-left: -50px;
 }
