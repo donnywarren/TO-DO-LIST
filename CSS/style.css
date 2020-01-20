@@ -34,3 +34,35 @@ h1 {
   padding-right: 50px;
   margin-left: -50px;
 }
+
+span {
+  display: inline-block;
+}
+
+
+.complete {
+  float: left;
+}
+
+.remove {
+  float: right;
+}
+
+#check {
+  border: 1px solid #c7c7c7;
+  border-radius: 25%;
+  color: transparent;
+}
+
+
+#check:hover {
+  color: #111;
+  cursor: pointer;
+}
+
+.ex {
+  background-color: #c7c7c7;
+  height: 20px;
+  width: 20px;
+  float: right;
+}
