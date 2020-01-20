@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
   var task = ["Laundry","Pay Bills"];
   var item = task[1];
 
-      console.log(item);
 
 
 
@@ -17,8 +16,14 @@ document.addEventListener("DOMContentLoaded", function() {
     event.preventDefault();
 
     var userContent = document.getElementById("new-item").value;
+
+    task.push(userContent);
+
+          console.log(task[task.length - 1]);
+
+
     var newLi = document.createElement("li");
-    
+
 
 
 
@@ -64,8 +69,8 @@ document.addEventListener("DOMContentLoaded", function() {
       }
 
 
-
-    console.log(userContent);
+    //
+    // console.log(userContent);
   });
 
 
