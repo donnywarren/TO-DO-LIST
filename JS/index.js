@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
   task.forEach(function(item, index) {
   var number = index + 1;
+  var staticItem = item;
+  var newLi = document.createElement("li");
+  newLi.id = "l" + [index];
+  newLi.innerHTML = item;
+  // document.getElementById("l" + [task.length - 1]);
+  document.getElementById("to-do-list").appendChild(newLi);
+
+
+
   });
 
 
