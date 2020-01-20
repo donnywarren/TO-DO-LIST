@@ -26,20 +26,25 @@ html {
 
 .list-functional-container {
   position: absolute;
-  width: 300px;
+  width: 320px;
 }
 
 h1 {
   font-size: 52px;
   padding-right: 50px;
   margin-top: 20px;
-  margin-left: -50px;
+  margin-left: -34px;
   margin-bottom: 8px;
 }
 
+.to-do-form {
+  margin-left: -5%;
+}
+
+
 ul {
-  margin-left: -25%;
-  margin-right: 10%;
+  margin-left: -23%;
+  margin-right: 7%;
 }
 
 
@@ -49,6 +54,33 @@ li {
 
 span {
   display: inline-block;
+}
+
+#submit-button {
+  border: 1px solid #c7c7c7;
+  border-radius: 5px;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+#submit-button:focus {
+  outline:none;
+}
+
+#submit-button:active {
+  transform: translateY(2px);
+  border-color:red;
+  color: red;
+}
+
+#new-item {
+  background-color: transparent;
+  width:200px;
+  border: 1px solid #c7c7c7;
+}
+
+#new-item:focus {
+  outline: none;
 }
 
 
