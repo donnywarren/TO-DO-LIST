@@ -11,11 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
   var staticItem = item;
   var checkSpan = document.createElement("span");
   checkSpan.id = "s" + [index];
+  checkSpan.className = "check";
+  checkSpan.innerHTML = "&#10003";
   var removeDiv = document.createElement("div");
   removeDiv.id = "d" + [index];
+  removeDiv.className = "ex";
+  removeDiv.innerHTML = "&#10005";
   var newLi = document.createElement("li");
   newLi.id = "l" + [index];
-  newLi.innerHTML = item;
+  newLi.innerHTML = "  " + item;
   newLi.prepend(checkSpan);
   newLi.appendChild(removeDiv);
 
