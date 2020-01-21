@@ -52,17 +52,36 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById("to-do-list").appendChild(newLi);
     }
 
-
-
-
-
-
-
     // REMOVE USER CONTENT INSIDE FORM
     document.getElementById("new-item").value="";
 
-    console.log(task);
-  });
+
+
+
+    // REMOVE LINE WHEN X CLICKED
+      var closeButtons = document.querySelectorAll('.ex');
+
+      closeButtons.forEach(function(closeButton){
+        closebutton.addEventListener("click", function(){
+
+        });
+    
+      });
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+
+
 
   // REMOVE LINE WHEN X CLICKED
     // var checkMarks = document.querySelectorAll('.check');
