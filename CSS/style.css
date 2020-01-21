@@ -32,13 +32,14 @@ html {
 h1 {
   font-size: 52px;
   padding-right: 50px;
-  margin-top: 20px;
+  margin-top: 18px;
   margin-left: -34px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .to-do-form {
   margin-left: -5%;
+  /* margin-bottom: -3px; */
 }
 
 
@@ -49,7 +50,9 @@ ul {
 
 
 li {
-  margin-top:11px;
+  font-family: 'Kalam', cursive;
+  font-size: 18px;
+  margin-top:9px;
 }
 
 span {
@@ -75,6 +78,8 @@ span {
 
 #new-item {
   background-color: transparent;
+  font-family: 'Kalam', cursive;
+  font-size: 14px;
   width:200px;
   border: 1px solid #c7c7c7;
 }
