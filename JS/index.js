@@ -44,30 +44,46 @@ document.addEventListener("DOMContentLoaded", function() {
     newLi.innerHTML = "  " + newItem;
     newLi.prepend(checkSpan);
     newLi.appendChild(removeDiv);
-    document.getElementById("to-do-list").appendChild(newLi);
 
-    // REMOVE USER CONTENT
+    // WARNING WHEN NO FORM IS EMPTY
+    if (userContent === '') {
+    alert("Please write something to do.");
+    } else {
+      document.getElementById("to-do-list").appendChild(newLi);
+    }
+
+
+
+
+
+
+
+    // REMOVE USER CONTENT INSIDE FORM
     document.getElementById("new-item").value="";
 
     console.log(task);
   });
 
-
-    var checkMarks = document.querySelectorAll('.check');
-
-    checkMarks.addEventListener("click", function(){
-      this.style.color = "#111";
-    });
-
-
-
+  // REMOVE LINE WHEN X CLICKED
+    // var checkMarks = document.querySelectorAll('.check');
+    //
+    // checkMarks.addEventListener("click", function(){
+    //   var
+    //   .style.color = "#111";
+    // });
 
 
+    // STRIKEOUT TEXT WHEN CHECK IS CLICKED
 
 
+
+
+    //
+    //
+    //
     // todo.style.textDecoration = "line-through";
-
-
+    //
+    //
 
       // document.getElementById("check").addEventListener("click", markBlack);
       //
