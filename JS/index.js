@@ -10,21 +10,47 @@ document.addEventListener("DOMContentLoaded", function() {
   checkSpan.id = "s" + [index];
   checkSpan.className = "check";
   checkSpan.innerHTML = "&#10004";
-  var removeDiv = document.createElement("div");
+  checkSpan.style.marginRight = "1px";
+  var removeDiv = document.createElement("button");
   removeDiv.id = "d" + [index];
   removeDiv.className = "ex";
   removeDiv.innerHTML = "&#10007";
+  removeDiv.style.padding = 0;
   var newLi = document.createElement("li");
   newLi.id = "l" + [index];
-  newLi.innerHTML = "  " + item;
+  newLi.innerHTML = " " + item;
   newLi.prepend(checkSpan);
   newLi.appendChild(removeDiv);
 
   document.getElementById("to-do-list").appendChild(newLi);
 
+  // REMOVE LINE WHEN X CLICKED
+    removeDiv.addEventListener('click', function() {
+      console.log('remove button was clicked');
+      newLi.remove();
+      // this.closest('li').remove();
+    });
+
+
+    // STRIKEOUT LIST ITEM WHEN CHECKED
+    checkSpan.addEventListener("click", function(){
+      if(newLi.style.textDecoration !== "line-through") {
+        newLi.style.textDecoration = "line-through";
+      } else {
+        newLi.style.textDecoration = "none";
+      }
+
+      if(checkSpan.style.color !== "rgb(17, 17, 17)"){
+        checkSpan.style.color = "rgb(17, 17, 17)";
+      } else {
+        checkSpan.style.color = "transparent";
+      }
+
+    });
+
   });
 
-  document.getElementById("submit-button").addEventListener("click", function(event){
+  document.getElementById("add").addEventListener("click", function(event){
     event.preventDefault();
 
     var userContent = document.getElementById("new-item").value;
@@ -35,13 +61,15 @@ document.addEventListener("DOMContentLoaded", function() {
     checkSpan.id = "s" + [task.length - 1];
     checkSpan.className = "check";
     checkSpan.innerHTML = "&#10004";
-    var removeDiv = document.createElement("div");
+    checkSpan.style.marginRight = "1px";
+    var removeDiv = document.createElement("button");
     removeDiv.id = "d" + [task.length - 1];
     removeDiv.className = "ex";
     removeDiv.innerHTML = "&#10007";
+    removeDiv.style.padding = 0;
     var newLi = document.createElement("li");
     newLi.id = "l" + [task.length - 1];
-    newLi.innerHTML = "  " + newItem;
+    newLi.innerHTML = " " + newItem;
     newLi.prepend(checkSpan);
     newLi.appendChild(removeDiv);
 
@@ -55,69 +83,32 @@ document.addEventListener("DOMContentLoaded", function() {
     // REMOVE USER CONTENT INSIDE FORM
     document.getElementById("new-item").value="";
 
+  // REMOVE LINE WHEN X CLICKED
+    removeDiv.addEventListener('click', function() {
+      console.log('remove button was clicked');
+      newLi.remove();
+      // this.closest('li').remove();
+    });
 
 
+    // STRIKEOUT LIST ITEM WHEN CHECKED
+    checkSpan.addEventListener("click", function(){
+      if(newLi.style.textDecoration !== "line-through") {
+        newLi.style.textDecoration = "line-through";
+      } else {
+        newLi.style.textDecoration = "none";
+      }
 
-    // REMOVE LINE WHEN X CLICKED
-      var closeButtons = document.querySelectorAll('.ex');
-
-      closeButtons.forEach(function(closeButton){
-        closebutton.addEventListener("click", function(){
-
-        });
-    
-      });
-
-
-
-
-
+      if(checkSpan.style.color !== "rgb(17, 17, 17)"){
+        checkSpan.style.color = "rgb(17, 17, 17)";
+      } else {
+        checkSpan.style.color = "transparent";
+      }
 
     });
 
 
 
+      });
 
-
-
-
-
-
-  // REMOVE LINE WHEN X CLICKED
-    // var checkMarks = document.querySelectorAll('.check');
-    //
-    // checkMarks.addEventListener("click", function(){
-    //   var
-    //   .style.color = "#111";
-    // });
-
-
-    // STRIKEOUT TEXT WHEN CHECK IS CLICKED
-
-
-
-
-    //
-    //
-    //
-    // todo.style.textDecoration = "line-through";
-    //
-    //
-
-      // document.getElementById("check").addEventListener("click", markBlack);
-      //
-      // function markBlack() {
-      //   document.getElementById("check").style.color="#111";
-      //
-      //
-      // }
-
-
-
-
-
-
-
-
-
-});
+    });

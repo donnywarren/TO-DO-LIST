@@ -30,16 +30,18 @@ html {
 }
 
 h1 {
-  font-size: 52px;
+  font-family: 'Kalam', cursive;
+  letter-spacing: -2px;
+  font-weight: 900;
+  font-size: 60px;
   padding-right: 50px;
   margin-top: 18px;
-  margin-left: -34px;
-  margin-bottom: 5px;
+  margin-left: -30px;
+  margin-bottom: 0px;
 }
 
 .to-do-form {
   margin-left: -5%;
-  /* margin-bottom: -3px; */
 }
 
 
@@ -59,21 +61,23 @@ span {
   display: inline-block;
 }
 
-#submit-button {
+#add {
   border: 1px solid #c7c7c7;
   border-radius: 5px;
   background-color: transparent;
-  font-weight: bold;
+  font-weight: 900;
+  box-shadow: 3px 5px 4px #969595;
 }
 
-#submit-button:focus {
+#add:focus {
   outline:none;
 }
 
-#submit-button:active {
+#add:active {
   transform: translateY(2px);
-  border-color:red;
-  color: red;
+  background-color: #4646f5;
+  color: #fff;
+  box-shadow: 0px 3px 2px -2px #969595;
 }
 
 #new-item {
@@ -89,33 +93,30 @@ span {
 }
 
 .check {
+  line-height: .85;
   border: 1px solid #c7c7c7;
   border-radius: 60%;
-  padding: 0 2px;
-
   color: transparent;
 }
 
 .check:hover {
-  color: #111;
-  cursor: pointer;
-}
-
-#check {
-  border: 1px solid #c7c7c7;
-  border-radius: 25%;
-  color: transparent;
-}
-
-
-#check:hover {
-  color: #111;
+  color: rgb(17, 17, 17);
   cursor: pointer;
 }
 
 .ex {
-  font-size: 18px;
+  border:none;
+  padding:none;
+  margin:none;
+  background-color:transparent;
+  font-family: 'Kalam', cursive;
+  font-size: 22px;
+  line-height: 1;
   float: right;
+}
+
+.ex:focus {
+  outline: none;
 }
 
 .ex:hover {
