@@ -4,18 +4,17 @@ document.addEventListener("DOMContentLoaded", function() {
   var task = ["Laundry","Pay Bills"];
 
 
+  // ON PAGE LOAD DISPLAYS PERMINENT LIST ITEMS
   task.forEach(function(item, index) {
 
   var checkSpan = document.createElement("span");
   checkSpan.id = "s" + [index];
   checkSpan.className = "check";
   checkSpan.innerHTML = "&#10004";
-  checkSpan.style.marginRight = "1px";
   var removeDiv = document.createElement("button");
   removeDiv.id = "d" + [index];
   removeDiv.className = "ex";
   removeDiv.innerHTML = "&#10007";
-  removeDiv.style.padding = 0;
   var newLi = document.createElement("li");
   newLi.id = "l" + [index];
   newLi.innerHTML = " " + item;
@@ -26,30 +25,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // REMOVE LINE WHEN X CLICKED
     removeDiv.addEventListener('click', function() {
-      console.log('remove button was clicked');
       newLi.remove();
-      // this.closest('li').remove();
+
     });
 
 
     // STRIKEOUT LIST ITEM WHEN CHECKED
     checkSpan.addEventListener("click", function(){
-      if(newLi.style.textDecoration !== "line-through") {
-        newLi.style.textDecoration = "line-through";
+
+      if(newLi.classList.contains("strike")){
+        newLi.classList.remove("strike");
       } else {
-        newLi.style.textDecoration = "none";
+        newLi.classList.add("strike");
       }
 
-      if(checkSpan.style.color !== "rgb(17, 17, 17)"){
-        checkSpan.style.color = "rgb(17, 17, 17)";
+      if(checkSpan.classList.contains("show")){
+        checkSpan.classList.remove("show");
       } else {
-        checkSpan.style.color = "transparent";
+        checkSpan.classList.add("show");
       }
 
     });
 
   });
 
+
+  // WHEN USER ADDS CONTENT
   document.getElementById("add").addEventListener("click", function(event){
     event.preventDefault();
 
@@ -61,19 +62,17 @@ document.addEventListener("DOMContentLoaded", function() {
     checkSpan.id = "s" + [task.length - 1];
     checkSpan.className = "check";
     checkSpan.innerHTML = "&#10004";
-    checkSpan.style.marginRight = "1px";
     var removeDiv = document.createElement("button");
     removeDiv.id = "d" + [task.length - 1];
     removeDiv.className = "ex";
     removeDiv.innerHTML = "&#10007";
-    removeDiv.style.padding = 0;
     var newLi = document.createElement("li");
     newLi.id = "l" + [task.length - 1];
     newLi.innerHTML = " " + newItem;
     newLi.prepend(checkSpan);
     newLi.appendChild(removeDiv);
 
-    // WARNING WHEN NO FORM IS EMPTY
+    // WARNING WHEN FORM IS EMPTY
     if (userContent === '') {
     alert("Please write something to do.");
     } else {
@@ -83,26 +82,26 @@ document.addEventListener("DOMContentLoaded", function() {
     // REMOVE USER CONTENT INSIDE FORM
     document.getElementById("new-item").value="";
 
-  // REMOVE LINE WHEN X CLICKED
+    // REMOVE LINE WHEN X CLICKED
     removeDiv.addEventListener('click', function() {
       console.log('remove button was clicked');
       newLi.remove();
-      // this.closest('li').remove();
     });
 
 
     // STRIKEOUT LIST ITEM WHEN CHECKED
     checkSpan.addEventListener("click", function(){
-      if(newLi.style.textDecoration !== "line-through") {
-        newLi.style.textDecoration = "line-through";
+
+      if(newLi.classList.contains("strike")){
+        newLi.classList.remove("strike");
       } else {
-        newLi.style.textDecoration = "none";
+        newLi.classList.add("strike");
       }
 
-      if(checkSpan.style.color !== "rgb(17, 17, 17)"){
-        checkSpan.style.color = "rgb(17, 17, 17)";
+      if(checkSpan.classList.contains("show")){
+        checkSpan.classList.remove("show");
       } else {
-        checkSpan.style.color = "transparent";
+        checkSpan.classList.add("show");
       }
 
     });

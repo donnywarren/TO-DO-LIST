@@ -97,11 +97,20 @@ span {
   border: 1px solid #c7c7c7;
   border-radius: 60%;
   color: transparent;
+  margin-right: 0px;
 }
 
 .check:hover {
-  color: rgb(17, 17, 17);
+  color: #111;
   cursor: pointer;
+}
+
+.show {
+  color: #111;
+}
+
+.strike {
+  text-decoration: line-through;
 }
 
 .ex {
