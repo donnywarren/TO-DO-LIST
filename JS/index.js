@@ -8,15 +8,12 @@ document.addEventListener("DOMContentLoaded", function() {
   task.forEach(function(item, index) {
 
   var checkSpan = document.createElement("span");
-  checkSpan.id = "s" + [index];
   checkSpan.className = "check";
   checkSpan.innerHTML = "&#10004";
   var removeDiv = document.createElement("button");
-  removeDiv.id = "d" + [index];
   removeDiv.className = "ex";
   removeDiv.innerHTML = "&#10007";
   var newLi = document.createElement("li");
-  newLi.id = "l" + [index];
   newLi.innerHTML = " " + item;
   newLi.prepend(checkSpan);
   newLi.appendChild(removeDiv);
@@ -59,15 +56,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var newItem = task[task.length - 1];
     var checkSpan = document.createElement("span");
-    checkSpan.id = "s" + [task.length - 1];
     checkSpan.className = "check";
     checkSpan.innerHTML = "&#10004";
     var removeDiv = document.createElement("button");
-    removeDiv.id = "d" + [task.length - 1];
     removeDiv.className = "ex";
     removeDiv.innerHTML = "&#10007";
     var newLi = document.createElement("li");
-    newLi.id = "l" + [task.length - 1];
     newLi.innerHTML = " " + newItem;
     newLi.prepend(checkSpan);
     newLi.appendChild(removeDiv);
