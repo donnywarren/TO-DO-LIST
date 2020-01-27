@@ -37,7 +37,6 @@ h1 {
   padding-right: 50px;
   margin-top: 18px;
   margin-left: -30px;
-  margin-bottom: 0px;
 }
 
 .to-do-form {
@@ -55,6 +54,7 @@ li {
   font-family: 'Kalam', cursive;
   font-size: 18px;
   margin-top:9px;
+  padding-bottom: 2px;
 }
 
 span {
