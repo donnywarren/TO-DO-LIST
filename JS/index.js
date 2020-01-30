@@ -67,14 +67,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   function removeActive(){
-    document.querySelector(".new-line.active").classlist.remove(".active");
+    document.querySelector(".new-line.active").classList.remove(".active");
   }
 
 
   document.getElementById("edit").addEventListener("click", function() {
     var editText = document.getElementById("edit-window").value;
     document.querySelector(".new-line.active p").innerHTML = editText;
-    newText.innerHTML = editText;
     document.getElementById("modal").style.display = "none";
     removeActive();
   });
