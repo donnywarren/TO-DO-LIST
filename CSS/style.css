@@ -55,6 +55,8 @@ ul {
 
 li {
   width: 365px;
+  height:25px;
+  overflow: visible;
   font-family: 'Kalam', cursive;
   font-size: 18px;
   margin-top: 4px;
